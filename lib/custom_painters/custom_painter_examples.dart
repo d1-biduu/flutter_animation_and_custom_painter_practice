@@ -7,13 +7,17 @@ class CustomPainterExampless extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text("Custom Painter Demo")),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          CustomPaint(size: Size(150, 150), painter: SimpleCirclePainter()),
-          CustomPaint(size: Size(150, 150), painter: LinePainter()),
-          CustomPaint(size: Size(150, 150), painter: RectanglePainter()),
-        ],
+      body: Center(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            CustomPaint(size: Size(150, 150), painter: SimpleCirclePainter()),
+            SizedBox(height: 20),
+            CustomPaint(size: Size(150, 150), painter: LinePainter()),
+            SizedBox(height: 20),
+            CustomPaint(size: Size(150, 150), painter: RectanglePainter()),
+          ],
+        ),
       ),
     );
   }
@@ -55,7 +59,6 @@ class LinePainter extends CustomPainter {
   @override
   bool shouldRepaint(LinePainter oldDelegate) => false;
 }
-
 
 //rectangleee
 class RectanglePainter extends CustomPainter {

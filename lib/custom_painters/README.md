@@ -116,3 +116,18 @@ class LinePainter extends CustomPainter {
 
 ---
 
+### How to use in Screen
+```dart
+Widget build(BuildContext context) {
+    return Scaffold(
+      body: Column(
+        children: [
+          CustomPaint(size: Size(150, 150), painter: SimpleCirclePainter()),
+          CustomPaint(size: Size(150, 150), painter: LinePainter()),
+        ],
+      ),
+    );
+  }
+```
+
+---
